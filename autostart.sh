@@ -57,3 +57,18 @@ sway-audio-idle-inhibit &
 # change light value and volume value by swayosd-client in keybind
 swayosd-server &
 
+/bin/bash ~/scripts/tap-to-click.sh &
+/bin/bash ~/scripts/inverse-scroll.sh &
+gnome-keyring &
+nutstore &
+copyq --start-server &
+if [ "$(command -v clash-verge)" ]; then
+  clash-verge &
+else
+  clash-nyanpasu &
+fi
+input-leap &
+sleep 2
+/bin/bash ~/.screenlayout/wl.sh
+swww-daemon &
+/bin/bash ~/scripts/wp-autochange.sh &
